@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" style="-fx-background-color: add149;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controlers.AppController">
+    <children>
+        <AnchorPane layoutY="128.0" prefHeight="272.0" prefWidth="600.0" style="-fx-background-color: fafafafa; -fx-background-radius: 20;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="126.0">
+         <children>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="text_filed_lastname" layoutX="14.0" layoutY="44.0" promptText="фамилия" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="14.0" />
+                  <TextField fx:id="text_filed_name" layoutX="14.0" layoutY="90.0" promptText="имя" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="53.0" />
+                  <TextField fx:id="text_filed_surname" layoutX="100.0" layoutY="141.0" promptText="отчество" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="92.0" />
+                  <Label fx:id="lable_id" layoutX="178.0" layoutY="18.0" prefHeight="17.0" prefWidth="16.0">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="table_client" layoutX="476.0" layoutY="132.0" prefHeight="510.0" prefWidth="1123.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+              <columns>
+                  <TableColumn fx:id="id_column" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="lastname_column" prefWidth="75.0" text="фамилия" />
+                <TableColumn fx:id="name_column" prefWidth="75.0" text="имя" />
+                  <TableColumn fx:id="surname_column" prefWidth="75.0" text="отчество" />
+                  <TableColumn fx:id="date_of_birth_column" prefWidth="121.0" text="дата рождения" />
+                  <TableColumn fx:id="INN_column" prefWidth="191.0" text="ИНН" />
+                  <TableColumn fx:id="family_status_column" prefWidth="154.0" text="семейный статус" />
+                  <TableColumn fx:id="type_of_education_column" prefWidth="177.0" text="тип образования" />
+                  <TableColumn fx:id="vip_column" prefWidth="138.0" text="вип/обычный" />
+              </columns>
+            </TableView>
+            <Button fx:id="batton_add" layoutX="12.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: green;" text="добавить" textFill="WHITE" AnchorPane.topAnchor="326.0" />
+            <CheckBox fx:id="check_box_vip" layoutX="24.0" layoutY="520.0" mnemonicParsing="false" text="VIP" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="287.0" />
+            <TextField fx:id="text_filed_type_of_education" layoutX="13.0" layoutY="428.0" promptText="тип оброзования" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="248.0" />
+            <TextField fx:id="text_filed_family_status" layoutX="22.0" layoutY="359.0" promptText="семейный статус" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="209.0" />
+            <TextField fx:id="text_filed_INN" layoutX="-77.0" layoutY="306.0" prefHeight="25.0" prefWidth="149.0" promptText="ИНН" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="170.0" />
+            <DatePicker fx:id="date_picker_date_of_birth" layoutX="-18.0" layoutY="236.0" promptText="дата рождения" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="131.0" />
+            <Button fx:id="batton_update" layoutX="12.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: orange;" text="обновить" textFill="WHITE" AnchorPane.topAnchor="365.0" />
+            <Button fx:id="batton_delite" layoutX="13.0" layoutY="400.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: red;" text="удалить" textFill="WHITE" AnchorPane.topAnchor="404.0" />
+            <Button fx:id="batton_drop" layoutX="13.0" layoutY="438.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #A9A9A9;" text="сброс" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="443.0" />
+         </children>
+        </AnchorPane>
+        <Label alignment="TOP_CENTER" layoutY="27.0" prefHeight="55.0" prefWidth="1500.0" text="УЧЕТ КЛИЕНТОВ" textAlignment="CENTER" textFill="#807777" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="34.0">
+            <font>
+                <Font size="33.0" />
+            </font>
+        </Label>
+      <Button fx:id="button_close" layoutX="1387.0" layoutY="14.0" mnemonicParsing="false" text="x" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
